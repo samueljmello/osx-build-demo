@@ -14,5 +14,5 @@ jobs:
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v1
-      - name: Install Dependencies
-        run: echo "Placeholder"
+      - name: Get Working Directory
+        run: echo $(pwd)
