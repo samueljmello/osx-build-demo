@@ -1,0 +1,17 @@
+name: Build
+on: 
+  push:
+    - main
+    - dev
+    - feature/**
+defaults:
+  run:
+    working-directory: app
+jobs:
+  buildAndTest:
+    name: Build and Test
+    runs-on: osx-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Install Dependencies
+        run: echo "Placeholder"
