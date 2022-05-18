@@ -1,9 +1,13 @@
 name: Build
+defaults:
+  run:
+    working-directory: app
 on: 
   push:
-    - main
-    - dev
-    - feature/**
+    branches:
+      - main
+      - dev
+      - feature/**
 defaults:
   run:
     working-directory: app
