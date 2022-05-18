@@ -8,9 +8,6 @@ on:
       - main
       - dev
       - feature/**
-defaults:
-  run:
-    working-directory: app
 jobs:
   buildAndTest:
     name: Build and Test
