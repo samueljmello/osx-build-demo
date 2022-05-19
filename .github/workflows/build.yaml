@@ -13,6 +13,9 @@ jobs:
     name: Lint Code
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v1
+      - name: PWD
+        run: $(pwd); ls -latr
       - name: SwiftLint
         uses: norio-nomura/action-swiftlint@3.2.1
         env:
