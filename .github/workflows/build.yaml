@@ -9,14 +9,12 @@ on:
       - dev
       - feature/**
 jobs:
-  Lint:
+  lint:
     name: Lint Code
     runs-on: ubuntu-latest
     steps:
       - name: SwiftLint
         uses: norio-nomura/action-swiftlint@3.2.1
-        env:
-          WORKING_DIRECTORY: Shared
   buildAndTest:
     name: Build
     runs-on: macos-latest
