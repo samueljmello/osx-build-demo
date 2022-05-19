@@ -14,5 +14,7 @@ jobs:
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v1
-      - name: Get Working Directory
-        run: echo $(pwd)
+      - name: Test Build macOS
+        run: xcodebuild -workspace project.xcworkspace -scheme "demo (macOS)"
+      - name: Test Build iOS
+        run: xcodebuild -workspace project.xcworkspace -scheme "demo (iOS)"
