@@ -15,6 +15,7 @@ jobs:
     steps:
       - name: SwiftLint
         uses: norio-nomura/action-swiftlint@3.2.1
+        working-directory: Shared
   buildAndTest:
     name: Build
     runs-on: macos-latest
