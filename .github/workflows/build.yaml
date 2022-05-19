@@ -9,14 +9,18 @@ on:
       - dev
       - feature/**
 jobs:
-  buildAndTest:
+  Lint:
     name: Build and Test
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     steps:
       - name: GitHub Action for SwiftLint (Different working directory)
         uses: norio-nomura/action-swiftlint@3.2.1
         env:
           WORKING_DIRECTORY: app/demo/Shared
+  buildAndTest:
+    name: Build and Test
+    runs-on: macos-latest
+    steps:
       - uses: actions/checkout@v1
       - name: Test Build macOS
         run: xcodebuild -scheme "demo (macOS)"
