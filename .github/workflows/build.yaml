@@ -12,9 +12,10 @@ jobs:
   buildAndTest:
     name: Build and Test
     runs-on: macos-latest
+    working-directory: app/demo
     steps:
       - uses: actions/checkout@v1
       - name: Test Build macOS
-        run: xcodebuild -workspace project.xcworkspace -scheme "demo (macOS)"
+        run: xcodebuild -scheme "demo (macOS)"
       - name: Test Build iOS
-        run: xcodebuild -workspace project.xcworkspace -scheme "demo (iOS)"
+        run: xcodebuild -scheme "demo (iOS)"
