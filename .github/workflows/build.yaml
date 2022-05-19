@@ -1,7 +1,7 @@
 name: Build
 defaults:
   run:
-    working-directory: app
+    working-directory: app/demo
 on: 
   push:
     branches:
@@ -12,7 +12,6 @@ jobs:
   buildAndTest:
     name: Build and Test
     runs-on: macos-latest
-    working-directory: app/demo
     steps:
       - uses: actions/checkout@v1
       - name: Test Build macOS
