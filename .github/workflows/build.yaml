@@ -15,7 +15,9 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: PWD
-        run: $(pwd); ls -latr
+        run: pwd
+      - name: PWD
+        run: ls -latr
       - name: SwiftLint
         uses: norio-nomura/action-swiftlint@3.2.1
         env:
